@@ -1,5 +1,3 @@
-console.info('hi')
-
 const expectedTextRegex = new RegExp(
   'failed. Expected:<((.|\\n)*)>. Actual:<((.|\\n)*)>. \n ',
   'm',
@@ -16,18 +14,8 @@ const sync = debounce(function _sync(bool) {
   }
 }, 20, true)
 
-expectedElement.addEventListener('scroll', debounce(select_scroll_1, 100, false), false)
-actualElement.addEventListener('scroll', debounce(select_scroll_2, 100, false), false)
-
-function select_scroll_1() {
-  console.log('s1')
-  sync(false)
-}
-
-function select_scroll_2() {
-  console.log('s2')
-  sync(true)
-}
+expectedElement.addEventListener('scroll', debounce(() => sync(false), 100, false), false)
+actualElement.addEventListener('scroll', debounce(() => sync(true), 100, false), false)
 
 function processText(textAreaElement) {
   const rawText = textAreaElement.value
