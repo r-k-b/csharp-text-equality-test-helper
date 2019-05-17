@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>C# Text Comparer Helper</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script async type="text/javascript" src="./main.js"></script>
+</head>
+<body>
+<div class="maingrid">
+  <div class="maingrid__input">
+    <p>
+      paste test output here
+    </p>
+    <textarea name="text_input" cols="30" rows="10" oninput="processText(this)"></textarea>
+  </div>
+  <div class="maingrid__expected">
+    <p>
+      expected text
+    </p>
+    <textarea name="text_output_expected" id="text_output_expected" cols="30" rows="10"></textarea>
+  </div>
+  <div class="maingrid__output">
+    <p>
+      actual text
+    </p>
+    <textarea name="text_output_actual" id="text_output_actual" cols="30" rows="10"></textarea>
+  </div>
+</div>
+
+</body>
+</html>
