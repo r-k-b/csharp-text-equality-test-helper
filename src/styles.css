@@ -27,3 +27,10 @@ textarea {
 .maingrid__expected {
   grid-area: actual;
 }
+
+@media (prefers-color-scheme: dark) {
+  body, textarea {
+    background-color: black;
+    color: white;
+  }
+}
